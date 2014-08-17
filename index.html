@@ -141,6 +141,7 @@ Resolving deltas: 100% (18425/18425), done.</code></pre>
 <h3 id="installing-z3">Installing Z3</h3>
 <p>Instructions for installing <strong>Z3</strong> for Ubuntu are <a href="http://z3.codeplex.com/SourceControl/latest#README" title="Z3 Installation Instructions"><strong>here</strong></a> (little hard to find).</p>
 <p>But just in case whatever, they are again listed here (I didn’t want to install it to <code>/usr/bin</code>, but <code>~/bin</code> instead):</p>
+<p>Its also important to install version <code>4.3.2</code> and above.</p>
 <pre><code>% git clone https://git01.codeplex.com/z3
 % cd z3
 % autoconf
@@ -149,6 +150,12 @@ Resolving deltas: 100% (18425/18425), done.</code></pre>
 % cd build
 % make -j8
 % sudo make install</code></pre>
+<p>I had previously tried <code>4.3.1</code> as it was the “stable” release, however when I eventually tried verifying a module, I got the following error:</p>
+<pre><code>Error setting 'MODEL.PARTIAL', reason: unknown option.
+ERROR: invalid INI file
+Fatal error: exception Failure(&quot;bracket hits exn: Failure(&quot;bracket hits exn: End_of_file \n&quot;) 
+&quot;)</code></pre>
+<p>When I replaced it with the <code>4.3.2</code> version of <code>z3</code>, it worked.</p>
 <h3 id="building-the-ocaml-compiler">Building the OCaml Compiler</h3>
 <p>Instructions are <a href="https://github.com/ocaml/ocaml/blob/trunk/INSTALL" title="OCaml Installation Instructions"><strong>here</strong></a>.</p>
 <p>Again just in case and to compare:</p>
