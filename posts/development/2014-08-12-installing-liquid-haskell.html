@@ -4,13 +4,56 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Installing Liquid Haskell</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- facebook open graph tags -->
+
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://irreverentfeats.com/posts/development/2014-08-12-installing-liquid-haskell.html" />
+        <meta property="og:title" content="Installing Liquid Haskell" />
+        <meta property="og:description" content="What the title says" />
         
+          <meta property="og:image" content="http://irreverentpixelfeats.com/images/fb-logo.png" />
         
+
+        <!---— twitter card tags additive with the og: tags ---->
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- warning: domain is baked in here... -->
+        <meta name="twitter:domain" value="irreverentfeats.com" />
+        <meta name="twitter:title" value="Installing Liquid Haskell" />
+        <meta name="twitter:description" value="What the title says" />
+        
+          <meta name="twitter:image" content="http://irreverentpixelfeats.com/images/logo-and-typography-orange.png" />
+        
+        <meta name="twitter:url" value="http://irreverentpixelfeats.com/posts/development/2014-08-12-installing-liquid-haskell.html" />
+        <meta name="twitter:label1" value="Author" />
+        
+          <meta name="twitter:data1" value="Dom De Re" />
+        
+        <meta name="twitter:label2" value="Reading Time" />
+        
+          <meta name="twitter:data2" value="4 mins" />
+        
+
+        <meta name="description" content="What the title says">
+        <meta name="author" content="Dom De Re">
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="114x114" href="../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../images/manifest.json">
+        <link rel="mask-icon" href="../../images/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta name="msapplication-config" content="/images/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
         <!-- styles -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="../css/pandoc.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../css/fonts.css" rel="stylesheet">
+        <link href="../../css/irreverent.css" rel="stylesheet">
+        <link href="../../css/pandoc.css" rel="stylesheet">
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -18,11 +61,11 @@
         <![endif]-->
 
         <!-- Fav and touch icons -->
-        <link rel="shortcut icon" href="../ico/favicon.ico">
+        <link rel="shortcut icon" href="../../ico/favicon.ico">
 
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="no-gradient-fill navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,14 +74,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../">The Forgetful Functor</a>
+                    <a class="navbar-brand" href="../../">The Forgetful Functor</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../posts.html">Posts</a></li>
+                    <ul class="irreverent-navbar nav navbar-nav">
+                        <li><a href="../../">Home</a></li>
+                        <li><a href="../../posts.html">Posts</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                        <!--li ><a href="/posts.html">Posts</a></li-->
                     </ul>
                 </div>
             </div>
@@ -49,11 +93,35 @@
             <h1>Installing Liquid Haskell</h1>
 
 <div class="info">
-    Posted on August 12, 2014
-    
+    <i class="fa fa-calendar" aria-hidden="true"></i> <time datetime="2014-08-12" pubdate data-updated="true">August 12, 2014</time>
 </div>
 
+
+<div class="info">
+    <i class="fa fa-user-circle" aria-hidden="true"></i> Dom De Re
+</div>
+
+
+
+
+
+<div class="info">
+    <i class="fa fa-clock-o" aria-hidden="true"></i> 4 mins
+</div>
+
+
+<div class="info">
+    <i class="fa fa-folder" aria-hidden="true"></i> <a href="../../categories/development.html">development</a>
+</div>
+
+
+<div class="info">
+    <i class="fa fa-bookmark" aria-hidden="true"></i> <a href="../../tags/liquid%20haskell.html">liquid haskell</a>, <a href="../../tags/z3.html">z3</a>, <a href="../../tags/refined%20types.html">refined types</a>
+</div>
+
+
 <p>I’m looking to try out <a href="http://goto.ucsd.edu/~rjhala/liquid/haskell/blog/about/" title="About Liquid Haskell"><strong>Liquid Haskell</strong></a> in preparation for a blog post so figured I would document the installation experience.</p>
+<!-- more -->
 <p>(So I’ll save the details and motivation for looking at <strong>Liquid Haskell</strong> until then)</p>
 <p>Its more to document the inconvenience and hoops I had to jump through. Part of what I would like to comment on is the hassle/ease of installing it.</p>
 <h2 id="prequisites">Prequisites</h2>
@@ -135,16 +203,52 @@ Fatal error: exception Failure(&quot;bracket hits exn: Failure(&quot;bracket hit
             <hr />
 
             <footer>
-                Site proudly generated by
-                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                <div class="text-center">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://twitter.com/dom_dere" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/domdere" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://blog.forgetfulfunctor.com/atom.feed" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-rss-square fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright">
+                        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014 - 2018 Dom De Re
+                        <br>
+                        </br>
+                    </p>
+                </div>
+                <div class="text-center">
+                  Site proudly generated by
+                  <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                </div>
             </footer>
+
         </div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../../js/jquery-1.11.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
 
 
     </body>

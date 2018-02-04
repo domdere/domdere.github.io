@@ -5,11 +5,44 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!---— facebook open graph tags ---->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://blog.forgetfulfunctor.com/about.html" />
+        <meta property="og:title" content="About" />
+        
+          <meta property="og:description" content="A Sydney based functional programmer" />
+        
+        <!--meta property="og:image" content="http://blog.forgetfulfunctor.com/images/logo-and-typography-orange.png" /-->
+        
+        <!---— twitter card tags additive with the og: tags ---->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:domain" value="blog.forgetfulfunctor.com" />
+        <meta name="twitter:title" value="About" />
+        
+          <meta property="twitter:description" content="A Sydney based indie game developer" />
+        
+        <!--meta name="twitter:image" content="http://blog.forgetfulfunctor.com/images/logo-and-typography-orange.png" /-->
+        <meta name="twitter:url" value="http://blog.forgetfulfunctor.com/about.html" />
+
         
         
+        <!-- favicons -->
+        <!--link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/images/manifest.json">
+        <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/images/favicon.ico"-->
+        <meta name="msapplication-config" content="/images/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
         <!-- styles -->
         <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
         <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="./css/fonts.css" rel="stylesheet">
+        <link href="./css/irreverent.css" rel="stylesheet">
         <link href="./css/pandoc.css" rel="stylesheet">
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -18,11 +51,11 @@
         <![endif]-->
 
         <!-- Fav and touch icons -->
-        <link rel="shortcut icon" href="./ico/favicon.ico">
+        <!--link rel="shortcut icon" href="/ico/favicon.ico"-->
 
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="no-gradient-fill navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,11 +67,12 @@
                     <a class="navbar-brand" href="./">The Forgetful Functor</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="irreverent-navbar nav navbar-nav">
                         <li><a href="./">Home</a></li>
+                        <li><a href="./posts.html">Posts</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                         <li class="active"><a href="./about.html">About</a></li>
-                        <li><a href="./posts.html">Posts</a></li>
+                        <!--li ><a href="/posts.html">Posts</a></li-->
                     </ul>
                 </div>
             </div>
@@ -48,28 +82,92 @@
         <div class="container">
             <h1 id="about">About</h1>
 <h2 id="me">Me</h2>
-<p>I’m a Software Engineer, with an interest in Mathematics. As a Software Engineer, I’m a late adopter of Functional Programming. As a Mathematician, I’m a late adopter of Category Theory.</p>
-<p>At this stage, I’m a wannabe Haskell afficianado.</p>
-<h2 id="the-site">The Site</h2>
-<p>When I began learning FP, there were many suitable looking places to start. <a href="http://www.learnyouahaskell.com" title="Learn You a Haskell For Great Good!"><strong>Learn You a Haskell for Great Good</strong></a> was certainly a fun and engaging introduction to both FP and Haskell that managed to get across the benefits of the paradigm.</p>
-<p>These days more and more beginner FP books are cropping up that go beyond where <em>Learn You a Haskell for Great Good</em> stops.</p>
-<p>After reading those, however, I didn’t really know where to go next with it. There’s all kinds of interesting research going on into the area, there’s a lot to learn that hasn’t found its way into books yet. So my main means of learning have been reading blogs and sifting through research papers. To this day I still find that even though I learn about advanced concepts, I’m still frequently surprised by really simple concepts that I come across that are completely new to me.</p>
-<p>So I wish to catalogue the rest of my FP (primarily Haskell) learning experience on this site and try to organise the concepts I learn in some sort of order of increasing difficulty.</p>
-<p>Plus it’ll probably help me get some misconceptions along the way corrected.</p>
+<p>I’m a software developer with upwards of 12 years experience now.</p>
+<p>My interests lie in:</p>
+<ul>
+<li>Functional Programming</li>
+<li>Devops</li>
+<li>Software Architecture</li>
+<li>Game Development</li>
+<li>Mathematics</li>
+<li>Group Theory</li>
+<li>Category Theory</li>
+<li>Game Theory</li>
+<li>Philosophy</li>
+<li>Drawing</li>
+<li>“Leadership”</li>
+</ul>
+<p>Right now I am participating in a “20% experiment”. I am working part time as a software engineer 4 days a week and using the extra day a week to pursue my own interests.</p>
+<p>That time is divvied up between doing work for <a href="http://irreverentpixelfeats.com">my game studio</a> and providing consulting on the topics of:</p>
+<ul>
+<li>Tech Leadership</li>
+<li>Tech Architecture</li>
+<li>Tech Culture</li>
+</ul>
+<p>When I say “Leadership”, I don’t mean that word that people use in place of “Management” so they can feel like Elon Musk or Jeff Bezos.</p>
+<p>My interest lies in leading teams and companies towards a vision as if employees and team members mattered, along with the users of your platform and/or customers of your business.</p>
+<p>I’m specifically against the kind of leadership that teach employees to eschew their self-interests like:</p>
+<ul>
+<li>Improving their working environment</li>
+<li>Increasing their own productivity and efficiency</li>
+<li>Exploring their own interests</li>
+<li>Etc…</li>
+</ul>
+<p>To the extent where they must only care about the things CEOs and sales people care about.</p>
+<p>The “leadership” that most people aspire to is the level where they graduate from having their self-interests denied them to the ones doing the denying.</p>
+<p>The difficulty in leadership lies in balancing the two, tending to your users is a must of course for any business, but its really the bare minimum. I’m just more interested in solving the harder problem.</p>
+<p>I also believe the answer lies in combining a diverse set of interests like Philosophy, Game Theory, Mathematics and maybe Economics, rather than just reading all of Maxwell’s books on leadership.</p>
 
             <hr />
 
+
             <footer>
-                Site proudly generated by
-                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                <div class="text-center">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://twitter.com/dom_dere" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/domdere" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://blog.forgetfulfunctor.com/atom.feed" data-datatype="json" data-type="GET" data-target="#frame" class="reload" id="clickme" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-rss-square fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright">
+                        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014 - 2018 Dom De Re
+                        <br>
+                        </br>
+                    </p>
+                </div>
+                <div class="text-center">
+                  Site proudly generated by
+                  <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                </div>
             </footer>
+
         </div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery-1.11.0.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
 
 
     </body>

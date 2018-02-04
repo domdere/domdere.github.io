@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Forgetful Functor</title>
+    <link href="http://blog.forgetfulfunctor.com/atom.feed" rel="self" />
+    <link href="http://blog.forgetfulfunctor.com" />
+    <id>http://blog.forgetfulfunctor.com/atom.feed</id>
+    <author>
+        <name>Dom De Re</name>
+        <email></email>
+    </author>
+    <updated>2018-02-04T00:00:00Z</updated>
+    <entry>
+    <title>Facelift</title>
+    <link href="http://blog.forgetfulfunctor.com/posts/news/2018-02-04-facelift.html" />
+    <id>http://blog.forgetfulfunctor.com/posts/news/2018-02-04-facelift.html</id>
+    <published>2018-02-04T00:00:00Z</published>
+    <updated>2018-02-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<h1>Facelift</h1>
+
+<div class="info">
+    <i class="fa fa-calendar" aria-hidden="true"/> <time datetime="2018-02-04" pubdate data-updated="true">February  4, 2018</time>
+</div>
+
+
+<div class="info">
+    <i class="fa fa-user-circle" aria-hidden="true"/> Dom De Re
+</div>
+
+
+
+
+
+<div class="info">
+    <i class="fa fa-clock-o" aria-hidden="true"/> 1 min
+</div>
+
+
+<div class="info">
+    <i class="fa fa-folder" aria-hidden="true"/> <a href="/categories/news.html">news</a>
+</div>
+
+
+<div class="info">
+    <i class="fa fa-bookmark" aria-hidden="true"/> 
+</div>
+
+
+<p>Pulled the old blog out of mothballs and gave it a bit of a facelift.</p>
+<!-- more -->
+<p>A bit has changed, see <a href="/about.html">the new about</a> page.</p>
+]]></summary>
+</entry>
+<entry>
+    <title>Installing Liquid Haskell</title>
+    <link href="http://blog.forgetfulfunctor.com/posts/development/2014-08-12-installing-liquid-haskell.html" />
+    <id>http://blog.forgetfulfunctor.com/posts/development/2014-08-12-installing-liquid-haskell.html</id>
+    <published>2014-08-12T00:00:00Z</published>
+    <updated>2014-08-12T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<h1>Installing Liquid Haskell</h1>
+
+<div class="info">
+    <i class="fa fa-calendar" aria-hidden="true"/> <time datetime="2014-08-12" pubdate data-updated="true">August 12, 2014</time>
+</div>
+
+
+<div class="info">
+    <i class="fa fa-user-circle" aria-hidden="true"/> Dom De Re
+</div>
+
+
+
+
+
+<div class="info">
+    <i class="fa fa-clock-o" aria-hidden="true"/> 4 mins
+</div>
+
+
+<div class="info">
+    <i class="fa fa-folder" aria-hidden="true"/> <a href="/categories/development.html">development</a>
+</div>
+
+
+<div class="info">
+    <i class="fa fa-bookmark" aria-hidden="true"/> <a href="/tags/liquid%20haskell.html">liquid haskell</a>, <a href="/tags/z3.html">z3</a>, <a href="/tags/refined%20types.html">refined types</a>
+</div>
+
+
+<p>I’m looking to try out <a href="http://goto.ucsd.edu/~rjhala/liquid/haskell/blog/about/" title="About Liquid Haskell"><strong>Liquid Haskell</strong></a> in preparation for a blog post so figured I would document the installation experience.</p>
+<!-- more -->
+<p>(So I’ll save the details and motivation for looking at <strong>Liquid Haskell</strong> until then)</p>
+<p>Its more to document the inconvenience and hoops I had to jump through. Part of what I would like to comment on is the hassle/ease of installing it.</p>
+<h2 id="prequisites">Prequisites</h2>
+<p>So <strong>Liquid Haskell</strong> requires the following:</p>
+<ul>
+<li>A recent <strong>Ocaml</strong> compiler…</li>
+<li><a href="http://z3.codeplex.com/" title="Z3"><strong>Z3</strong></a></li>
+</ul>
+<h3 id="installing-the-latest-version-of-git">Installing the latest version of Git</h3>
+<p>I was running the version of <strong>Git</strong> from the aptitude <code>git</code> package (version <code>1.9.1</code>) and was getting this error:</p>
+<pre><code>% git clone https://git01.codeplex.com/z3
+Cloning into &#39;z3&#39;...
+remote: Counting objects: 23690, done.
+remote: Compressing objects: 100% (5648/5648), done.
+remote: Total 23690 (delta 18425), reused 23042 (delta 17944)
+Receiving objects: 100% (23690/23690), 9.65 MiB | 184.00 KiB/s, done.
+error: RPC failed; result=56, HTTP code = 200
+Resolving deltas: 100% (18425/18425), done.</code></pre>
+<p>Apparently the problem is due to the PPA distributed binaries being linked to <code>libcurl3-openssl</code>, so the solution is to build them from source and link them to <code>libcurl4-openssl</code></p>
+<p>The following builds and installs latest version of <code>git</code> (version <code>2.0.3</code> at the time of this writing) from source.</p>
+<pre><code>% sudo apt-get install gettext zlib1g-dev asciidoc libcurl4-openssl-dev
+% git clone git@github.com:git/git.git
+% cd git
+% git checkout v2.0.3
+% make configure
+% ./configure --prefix=/usr
+% make all doc
+% sudo make install install-doc install-html</code></pre>
+<h3 id="installing-z3">Installing Z3</h3>
+<p>Instructions for installing <strong>Z3</strong> for Ubuntu are <a href="http://z3.codeplex.com/SourceControl/latest#README" title="Z3 Installation Instructions"><strong>here</strong></a> (little hard to find).</p>
+<p>But just in case whatever, they are again listed here (I didn’t want to install it to <code>/usr/bin</code>, but <code>~/bin</code> instead):</p>
+<p>Its also important to install version <code>4.3.2</code> and above.</p>
+<pre><code>% git clone https://git01.codeplex.com/z3
+% cd z3
+% autoconf
+% ./configure --prefix=~/bin
+% python scripts/mk_make.py
+% cd build
+% make -j8
+% sudo make install</code></pre>
+<p>I had previously tried <code>4.3.1</code> as it was the “stable” release, however when I eventually tried verifying a module, I got the following error:</p>
+<pre><code>Error setting &#39;MODEL.PARTIAL&#39;, reason: unknown option.
+ERROR: invalid INI file
+Fatal error: exception Failure(&quot;bracket hits exn: Failure(&quot;bracket hits exn: End_of_file \n&quot;) 
+&quot;)</code></pre>
+<p>When I replaced it with the <code>4.3.2</code> version of <code>z3</code>, it worked.</p>
+<h3 id="building-the-ocaml-compiler">Building the OCaml Compiler</h3>
+<p>Instructions are <a href="https://github.com/ocaml/ocaml/blob/trunk/INSTALL" title="OCaml Installation Instructions"><strong>here</strong></a>.</p>
+<p>Again just in case and to compare:</p>
+<pre><code>% git clone git@github.com:ocaml/ocaml.git
+% cd ocaml
+% git checkout 4.01.0
+% ./configure
+% make world
+% make bootstrap
+% make opt
+% make opt.opt
+% umask 022
+% make install
+% make clean</code></pre>
+<h2 id="installing-ghc-version-4.8.3">Installing GHC version 4.8.3</h2>
+<p>Liquid Haskell needs <strong>GHC</strong>, version <code>4.8.3</code>, instructions to build it from source are <a href="https://ghc.haskell.org/trac/ghc/wiki/Building/QuickStart" title="GHC Installation Instructions"><strong>here</strong></a></p>
+<h2 id="installing-liquid-haskell">Installing Liquid Haskell</h2>
+<pre><code>% mkdir -p ~/haskell-tools/liquid-haskell
+% cd ~/haskell-tools/liquid-haskell
+% git clone git@github.com:ucsd-progsys/liquid-fixpoint.git
+% git clone git@github.com:ucsd-progsys/liquidhaskell.git
+% cabal sandbox init
+% cabal sandbox add-source liquid-fixpoint
+% cabal sandbox add-source liquidhaskell
+% cabal install liquid-fixpoint
+% cabal install liquidhaskell
+% mkdir -p ~/haskell-tools/bin
+% cd ~/haskell-tools/bin
+% ln -sf ~/haskell-tools/liquid-haskell/.cabal-sandbox/bin/liquid .
+% ln -sf ~/haskell-tools/liquid-haskell/.cabal-sandbox/bin/fixpoint .</code></pre>
+]]></summary>
+</entry>
+
+</feed>
