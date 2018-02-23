@@ -1,62 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Forgetful Functor</title>
-    <link href="http://blog.forgetfulfunctor.com/atom.feed" rel="self" />
+    <link href="http://blog.forgetfulfunctor.com/feeds/development.feed" rel="self" />
     <link href="http://blog.forgetfulfunctor.com" />
-    <id>http://blog.forgetfulfunctor.com/atom.feed</id>
+    <id>http://blog.forgetfulfunctor.com/feeds/development.feed</id>
     <author>
         <name>Dom De Re</name>
         <email></email>
     </author>
-    <updated>2018-02-04T00:00:00Z</updated>
+    <updated>2014-08-12T00:00:00Z</updated>
     <entry>
-    <title>Facelift</title>
-    <link href="http://blog.forgetfulfunctor.com/posts/news/2018-02-04-facelift.html" />
-    <id>http://blog.forgetfulfunctor.com/posts/news/2018-02-04-facelift.html</id>
-    <published>2018-02-04T00:00:00Z</published>
-    <updated>2018-02-04T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<h1>Facelift</h1>
-
-
-<div class="info">
-    <i class="fa fa-book" aria-hidden="true"/> Pulled the site out of mothballs
-</div>
-
-
-<div class="info">
-    <i class="fa fa-calendar" aria-hidden="true"/> <time datetime="2018-02-04" pubdate data-updated="true">February  4, 2018</time>
-</div>
-
-
-<div class="info">
-    <i class="fa fa-user-circle" aria-hidden="true"/> Dom De Re
-</div>
-
-
-
-
-
-<div class="info">
-    <i class="fa fa-clock-o" aria-hidden="true"/> 1 min
-</div>
-
-
-<div class="info">
-    <i class="fa fa-folder" aria-hidden="true"/> <a href="/categories/news.html">news</a>
-</div>
-
-
-<div class="info">
-    <i class="fa fa-bookmark" aria-hidden="true"/> 
-</div>
-
-
-<p>Pulled the old blog out of mothballs and gave it a bit of a facelift.</p>
-<!-- more -->
-<p>A bit has changed, see <a href="/about.html">the new about</a> page.</p>
-]]></summary>
-</entry>
-<entry>
     <title>Installing Liquid Haskell</title>
     <link href="http://blog.forgetfulfunctor.com/posts/development/2014-08-12-installing-liquid-haskell.html" />
     <id>http://blog.forgetfulfunctor.com/posts/development/2014-08-12-installing-liquid-haskell.html</id>
