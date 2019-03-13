@@ -13,7 +13,7 @@
         <meta property="og:title" content="Installing Liquid Haskell" />
         <meta property="og:description" content="What the title says" />
         
-          <meta property="og:image" content="http://irreverentpixelfeats.com/images/fb-logo.png" />
+          <!--meta property="og:image" content="http://irreverentpixelfeats.com/images/fb-logo.png" / -->
         
 
         <!---— twitter card tags additive with the og: tags ---->
@@ -80,6 +80,7 @@
                     <ul class="irreverent-navbar nav navbar-nav">
                         <li><a href="../../">Home</a></li>
                         <li><a href="../../posts.html">Posts</a></li>
+                        <li><a href="../../coffee.html">Coffee</a></li>
                         <li><a href="../../contact.html">Contact</a></li>
                         <li><a href="../../about.html">About</a></li>
                         <!--li ><a href="/posts.html">Posts</a></li-->
@@ -126,7 +127,7 @@
 </div>
 
 
-<p>I’m looking to try out <a href="http://goto.ucsd.edu/~rjhala/liquid/haskell/blog/about/" title="About Liquid Haskell"><strong>Liquid Haskell</strong></a> in preparation for a blog post so figured I would document the installation experience.</p>
+<p>I’m looking to try out [<strong>Liquid Haskell</strong>] <a href="http://goto.ucsd.edu/~rjhala/liquid/haskell/blog/about/" title="About Liquid Haskell">liquid-haskell</a> in preparation for a blog post so figured I would document the installation experience.</p>
 <!-- more -->
 <p>(So I’ll save the details and motivation for looking at <strong>Liquid Haskell</strong> until then)</p>
 <p>Its more to document the inconvenience and hoops I had to jump through. Part of what I would like to comment on is the hassle/ease of installing it.</p>
@@ -134,7 +135,7 @@
 <p>So <strong>Liquid Haskell</strong> requires the following:</p>
 <ul>
 <li>A recent <strong>Ocaml</strong> compiler…</li>
-<li><a href="http://z3.codeplex.com/" title="Z3"><strong>Z3</strong></a></li>
+<li>[<strong>Z3</strong>] <a href="http://z3.codeplex.com/" title="Z3">z3</a></li>
 </ul>
 <h3 id="installing-the-latest-version-of-git">Installing the latest version of Git</h3>
 <p>I was running the version of <strong>Git</strong> from the aptitude <code>git</code> package (version <code>1.9.1</code>) and was getting this error:</p>
@@ -157,7 +158,7 @@ Resolving deltas: 100% (18425/18425), done.</code></pre>
 % make all doc
 % sudo make install install-doc install-html</code></pre>
 <h3 id="installing-z3">Installing Z3</h3>
-<p>Instructions for installing <strong>Z3</strong> for Ubuntu are <a href="http://z3.codeplex.com/SourceControl/latest#README" title="Z3 Installation Instructions"><strong>here</strong></a> (little hard to find).</p>
+<p>Instructions for installing <strong>Z3</strong> for Ubuntu are [<strong>here</strong>] <a href="http://z3.codeplex.com/SourceControl/latest#README" title="Z3 Installation Instructions">installing-z3</a> (little hard to find).</p>
 <p>But just in case whatever, they are again listed here (I didn’t want to install it to <code>/usr/bin</code>, but <code>~/bin</code> instead):</p>
 <p>Its also important to install version <code>4.3.2</code> and above.</p>
 <pre><code>% git clone https://git01.codeplex.com/z3
@@ -175,7 +176,7 @@ Fatal error: exception Failure(&quot;bracket hits exn: Failure(&quot;bracket hit
 &quot;)</code></pre>
 <p>When I replaced it with the <code>4.3.2</code> version of <code>z3</code>, it worked.</p>
 <h3 id="building-the-ocaml-compiler">Building the OCaml Compiler</h3>
-<p>Instructions are <a href="https://github.com/ocaml/ocaml/blob/trunk/INSTALL" title="OCaml Installation Instructions"><strong>here</strong></a>.</p>
+<p>Instructions are [<strong>here</strong>] <a href="https://github.com/ocaml/ocaml/blob/trunk/INSTALL" title="OCaml Installation Instructions">installing-ocaml</a>.</p>
 <p>Again just in case and to compare:</p>
 <pre><code>% git clone git@github.com:ocaml/ocaml.git
 % cd ocaml
@@ -189,7 +190,7 @@ Fatal error: exception Failure(&quot;bracket hits exn: Failure(&quot;bracket hit
 % make install
 % make clean</code></pre>
 <h2 id="installing-ghc-version-4.8.3">Installing GHC version 4.8.3</h2>
-<p>Liquid Haskell needs <strong>GHC</strong>, version <code>4.8.3</code>, instructions to build it from source are <a href="https://ghc.haskell.org/trac/ghc/wiki/Building/QuickStart" title="GHC Installation Instructions"><strong>here</strong></a></p>
+<p>Liquid Haskell needs <strong>GHC</strong>, version <code>4.8.3</code>, instructions to build it from source are [<strong>here</strong>] <a href="https://ghc.haskell.org/trac/ghc/wiki/Building/QuickStart" title="GHC Installation Instructions">installing-ghc</a></p>
 <h2 id="installing-liquid-haskell">Installing Liquid Haskell</h2>
 <pre><code>% mkdir -p ~/haskell-tools/liquid-haskell
 % cd ~/haskell-tools/liquid-haskell
@@ -237,7 +238,7 @@ Fatal error: exception Failure(&quot;bracket hits exn: Failure(&quot;bracket hit
                         </li>
                     </ul>
                     <p class="copyright">
-                        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014 - 2018 Dom De Re
+                        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014 - 2019 Dom De Re
                         <br>
                         </br>
                     </p>

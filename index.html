@@ -70,6 +70,7 @@
                     <ul class="irreverent-navbar nav navbar-nav">
                         <li class="active"><a href="./">Home</a></li>
                         <li><a href="./posts.html">Posts</a></li>
+                        <li><a href="./coffee.html">Coffee</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                         <li><a href="./about.html">About</a></li>
                         <!--li ><a href="/posts.html">Posts</a></li-->
@@ -152,6 +153,7 @@
                     <ul class="irreverent-navbar nav navbar-nav">
                         <li class="active"><a href="./">Home</a></li>
                         <li><a href="./posts.html">Posts</a></li>
+                        <li><a href="./coffee.html">Coffee</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                         <li><a href="./about.html">About</a></li>
                         <!--li ><a href="/posts.html">Posts</a></li-->
@@ -162,14 +164,18 @@
 
         <div class="container">
             <h1 id="dom-de-re">Dom De Re</h1>
-<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">About</span> <span class="fu">=</span> <span class="dt">Me</span>
-  {<span class="ot"> _software              ::</span> <span class="dt">Profession</span>   <span class="co">-- ^ Functional Programming</span>
-  ,<span class="ot"> _functionalProgramming ::</span> <span class="dt">Interest</span>
-  ,<span class="ot"> _devops                ::</span> <span class="dt">Interest</span>
-  ,<span class="ot"> _maths                 ::</span> <span class="dt">Interest</span>     <span class="co">-- ^ Algebra, Category Theory, Game Theory, Homotopy theory etc...</span>
-  ,<span class="ot"> _philosophy            ::</span> <span class="dt">Interest</span>
-  ,<span class="ot"> _leadership            ::</span> <span class="dt">Interest</span>     <span class="co">-- ^ Leadership as if your employees (as well as your customers) matter</span>
-  }</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">data</span> <span class="dt">About</span> <span class="ot">=</span> <span class="dt">Me</span></a>
+<a class="sourceLine" id="cb1-2" title="2">  {<span class="ot"> _software              ::</span> <span class="dt">Profession</span>   <span class="co">-- ^ Functional Programming</span></a>
+<a class="sourceLine" id="cb1-3" title="3">  ,<span class="ot"> _functionalProgramming ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-4" title="4">  ,<span class="ot"> _devops                ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-5" title="5">  ,<span class="ot"> _maths                 ::</span> <span class="dt">Interest</span>     <span class="co">-- ^ Algebra, Category Theory, Game Theory, Homotopy theory etc...</span></a>
+<a class="sourceLine" id="cb1-6" title="6">  ,<span class="ot"> _philosophy            ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-7" title="7">  ,<span class="ot"> _leadership            ::</span> <span class="dt">Interest</span>     <span class="co">-- ^ Leadership as if your employees (as well as your customers) matter</span></a>
+<a class="sourceLine" id="cb1-8" title="8">  ,<span class="ot"> _creativeWriting       ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-9" title="9">  ,<span class="ot"> _geekArt               ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-10" title="10">  ,<span class="ot"> _pixelArt              ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-11" title="11">  ,<span class="ot"> _illustration          ::</span> <span class="dt">Interest</span></a>
+<a class="sourceLine" id="cb1-12" title="12">  }</a></code></pre></div>
 
             <hr />
 
@@ -265,7 +271,7 @@
 
     </header>
 
-    <p>I’m looking to try out <a href="http://goto.ucsd.edu/~rjhala/liquid/haskell/blog/about/" title="About Liquid Haskell"><strong>Liquid Haskell</strong></a> in preparation for a blog post so figured I would document the installation experience.</p>
+    <p>I’m looking to try out [<strong>Liquid Haskell</strong>] <a href="http://goto.ucsd.edu/~rjhala/liquid/haskell/blog/about/" title="About Liquid Haskell">liquid-haskell</a> in preparation for a blog post so figured I would document the installation experience.</p>
 
 
     <div class="continue-link"><a href="./posts/development/2014-08-12-installing-liquid-haskell.html">Read More &raquo;</a></div>
@@ -311,7 +317,7 @@
                         </li>
                     </ul>
                     <p class="copyright">
-                        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014 - 2018 Dom De Re
+                        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014 - 2019 Dom De Re
                         <br>
                         </br>
                     </p>
